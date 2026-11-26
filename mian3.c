@@ -57,7 +57,8 @@ int main(void)   //The main function where the program starts running.
  if (ret < 0)   //Checks whether configuring the button pin failed.
  { return 0; }   //If configuration fails, the program stops.
 
-ret = gpio_pin_interrupt_configure( gpio4, BUTTON_PIN, GPIO_INT_EDGE_TO_ACTIVE);   //Configures an interrupt that occurs when the button changes to its active state.
+ret = gpio_pin_interrupt_configure( gpio4, BUTTON_PIN, GPIO_INT_EDGE_TO_ACTIVE);   //Configures an interrupt that occurs when the button changes to its active state.     It means: Detect a change from an inactive state to an active state.
+Generate an interrupt when that transition happens.
  if (ret < 0)   //Checks whether configuring the interrupt failed.
  { return 0; }   //If interrupt configuration fails, the program stops.
 
